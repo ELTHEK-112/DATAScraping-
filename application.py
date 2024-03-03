@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-
+st.set_page_config(layout="wide")
 # Display images on the left and right top corners
 col1, col2, col3 = st.columns([1, 6, 1])
 with col1:
