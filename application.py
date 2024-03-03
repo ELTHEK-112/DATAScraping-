@@ -6,7 +6,7 @@ col1, col2, col3 = st.columns([1, 6, 1])
 with col1:
     st.image("logo.png", width=150)
 with col3:
-    st.image("logo.png", width=250)  
+    st.image("logo2.png", width=250)  
 
      
 # Define the options for the menu
