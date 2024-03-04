@@ -5,8 +5,8 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import re
 import openpyxl
-
-
+# wide layout  by defult
+st.set_page_config(layout="wide")
 # Function to scrape <span> elements
 def scrape_span(url):
     response = requests.get(url, verify=False)
