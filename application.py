@@ -143,30 +143,70 @@ selected = option_menu(
 
 # Display content based on the selected menu option
 if selected == "Home":
-    st.title(f"You have selected {selected}")
+    st.title("Welcome to My Scraping Streamlit App")
+    st.markdown(
+    """
+    <style>
+        .big-font {
+            font-size: 20px !important;
+        }
+        .highlight {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
+
+    st.markdown("<p  align='justify' class='big-font'>Bienvenue sur notre SaaS dédié à la découverte d'emails sur le domaine <a href='https://www.uit.ac.ma/'> uit.ac.ma </a> ! Notre plateforme est spécialement conçue pour répondre aux besoins éducatifs et d'apprentissage au sein de l'institution UIT (Université Internationale de Technologie) située au Maroc. En tant qu'outil centré sur l'éducation, notre objectif principal est de fournir aux étudiants, aux enseignants et au personnel administratif une solution pratique et efficace pour trouver des adresses e-mail pertinentes au sein de leur communauté universitaire. Que ce soit pour faciliter la communication entre les différents départements, encourager la collaboration entre les étudiants et les professeurs, ou encore simplifier la gestion des contacts institutionnels. Nous nous engageons à soutenir l'éducation en fournissant des outils numériques adaptés qui favorisent l'efficacité, la connectivité et l'apprentissage au sein de l'environnement universitaire de l'UIT.</p>", unsafe_allow_html=True)
+
+    
 if selected == "Projects":
     main()
 if selected == "Contact":
     st.title(f"You have selected {selected}")
 
 # Footer
+st.markdown('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">', unsafe_allow_html=True)
 footer = """
 <style>
 .footer {
     background-color: #4B64FF;
     color: #ffffff;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
 }
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+
 </style>
 
 <div class="footer">
-    <p>This is the footer of the Streamlit app.</p>
-    <p>Feel free to customize the design!</p>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-pinterest"></a>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 Amin Chdadi </p>
+        </div>
+    </div>
 </div>
 """
 st.markdown(footer, unsafe_allow_html=True)
